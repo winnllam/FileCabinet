@@ -9,11 +9,11 @@ class DocsController < ApplicationController
   end
 
   def new
-    @doc = Doc.new #instance of a new document
+    @doc = current_user.docs.build #instance of a new document (for the current user only)
   end
 
   def create
-    @doc = Doc.new(doc_params) #title and content (in this case)
+    @doc = current_user.docs.build(doc_params) #title and content (in this case)
 
     if @doc.save
       redirect_to @doc #redirect to document itself
