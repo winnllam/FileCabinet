@@ -1,2 +1,6 @@
 %h1= @doc.title #take the doc title to render
 %p= @doc.content #show action needs to be defined
+
+= link_to "All Docs", docs_path #back to index
+= link_to "Fix Doc", edit_doc_path(@doc) #paths coming from rake routes
+= link_to "Trash It", doc_path(@doc), method: :delete, data: { confirm: "Are you sure?" }

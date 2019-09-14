@@ -1,11 +1,11 @@
 class DocsController < ApplicationController
-  before_action :find_doc, only: [:show, :edit, :update, :destory] #runs first; find doc for specific actions
+  before_action :find_doc, only: [:show, :edit, :update, :destroy] #runs first; find doc for specific actions
 
   def index
-    @docs = Doc1.all.order("created_at DESC") #order by creation time (descending)
+    @docs = Doc.all.order("created_at DESC") #order by creation time (descending)
   end
 
-  def show
+  def show #taken care of in before_action
   end
 
   def new
@@ -22,13 +22,20 @@ class DocsController < ApplicationController
     end
   end
 
-  def edit
+  def edit #view file (taken care of in before_action)
   end
 
-  def update
+  def update #fetches the doc and change parameters
+    if @doc.update(doc_params) #if updated, save changes
+      redirect_to @doc #then go back to doc
+    else
+      render 'edit' #render edit page
+    end
   end
 
-  def destory
+  def destroy
+    @doc.destroy #delete it
+    redirect_to docs_path #back to index page
   end
 
   private
