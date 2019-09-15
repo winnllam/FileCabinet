@@ -1,6 +1,13 @@
-- @docs.each do |doc| #loop through all documents
-  %h2= link_to doc.title, doc #link to doc
-  %p= time_ago_in_words(doc.created_at) #time stamp (comes from db)
-  %p= truncate(doc.content, length:50) #ask for snippet of doc
-
-= link_to "Create Doc", new_doc_path #make a new doc
+.wrapper_with_padding
+  #docs.clearfix
+    - unless @docs.blank? #if they have docs
+      - @docs.each do |doc| #loop through all documents, make clickable
+        %a{ href: (url_for [doc])}
+          .doc
+            %p.title= doc.title #link to doc
+            %p.date= time_ago_in_words(doc.created_at) #time stamp (comes from db)
+            %p.content= truncate(doc.content, length:50) #ask for snippet of doc
+    - else
+      %h2 Create Doc!
+      %p Starting creating!
+      %button= link_to "Create Doc", new_doc_path

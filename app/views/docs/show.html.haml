@@ -1,6 +1,9 @@
-%h1= @doc.title #take the doc title to render
-%p= @doc.content #show action needs to be defined
+.wrapper_with_padding
+  #doc_show
+    %h1.title= @doc.title #take the doc title to render
+    %p= simple_format(@doc.content) #show action needs to be defined; and formatting
 
-= link_to "All Docs", docs_path #back to index
-= link_to "Fix Doc", edit_doc_path(@doc) #paths coming from rake routes
-= link_to "Trash It", doc_path(@doc), method: :delete, data: { confirm: "Are you sure?" }
+    .buttons
+      = link_to "All Docs", docs_path, class: "button" #back to index
+      = link_to "Fix Doc", edit_doc_path(@doc), class: "button" #paths coming from rake routes
+      = link_to "Trash It", doc_path(@doc), method: :delete, data: { confirm: "Are you sure?" }, class: "button"
