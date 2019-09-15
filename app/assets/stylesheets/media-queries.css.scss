@@ -1,0 +1,34 @@
+@media screen and (max-width: 875px) {
+		#banner {
+			height: 750px;
+
+			#cabinet {
+				text-align: center;
+				width: 100%;
+			}
+			.banner_content {
+				display: block;
+			}
+		}
+}
+
+/* width less than 980 px */
+@media screen and (max-width: 630px) {
+	#docs {
+		.doc_frame {
+			.doc {
+				.date {
+					position: relative;
+					bottom: auto;
+					left: auto;
+				}
+				.content {
+					position: relative;
+					bottom: auto;
+					left: auto;
+					padding: 0 10px;
+				}
+			}
+		}
+	}
+}

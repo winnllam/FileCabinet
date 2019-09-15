@@ -8,6 +8,11 @@ $green: #529ECC;
 	text-transform: uppercase;
 }
 
+@mixin title_font {
+  font-family: 'Courier New', sans-serif;
+  text-transform: uppercase;
+}
+
 * {
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
@@ -46,18 +51,24 @@ button {
   margin: 0;
 }
 
+
 .button {
 	border: none;
 	outline: none;
 	background: #3DA79F;
 	padding: 1rem 3.5rem;
 	border-radius: 0.1rem;
-  
+  transition-duration: .5s;
+
 	a {
 		color: white;
 		text-decoration: none;
 		font-weight: bold;
 	}
+}
+
+.button:hover {
+  background: #C9F4F1;
 }
 
 .button {
@@ -66,11 +77,15 @@ button {
 }
 
 a {
-	color: $green;
+	color: white;
 	text-decoration: none;
 	&:hover {
 		color: $dark_gray;
 	}
+}
+
+.links {
+  color: rgb(85, 159, 202);
 }
 
 // HEADER STYLING
@@ -82,9 +97,11 @@ header {
 	width: 100%;
 	padding: 1.75rem 0;
 	border-bottom: 1.5px solid #376490;
+
 	.header_inner {
 		width: 90%;
 		margin: 0 auto;
+
 		#logo {
 			display: inline-block;
 			width: 10rem;
@@ -94,8 +111,10 @@ header {
 			font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
 			font-size: 2.0rem;
 		}
+
 		nav {
 			float: right;
+
 			a {
 				text-decoration: none;
 				color: white;
@@ -113,20 +132,38 @@ header {
 // FOOTER STYLING (OPTIONAL)
 
 footer {
-	background: #529ECC;
 	width: 100%;
-	padding: 2rem 0;
+  padding-bottom: 10px;
 	color: white;
 	text-align: center;
-	@include bold_font;
+
+  h2 {
+    color: black;
+    margin-bottom: 0;
+    @include bold_font;
+  }
+
 	p {
+    color: black;
 		margin: 0;
-		font-size: .65rem;
+		font-size: 10px;
 	}
+
+  img {
+    width: 40px;
+    height: 40px;
+    margin: 5px 10px;
+    transition: opacity 1s;
+  }
+
+  img:hover {
+    opacity: 0.3;
+  }
 }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
 	width: 100%;
+  padding-left: .7rem;
 	margin-bottom: 1rem;
 	border: 1px solid $light_gray;
 	border-radius: .4rem;
@@ -137,5 +174,18 @@ input[type="text"], input[type="email"], input[type="password"] {
 }
 
 textarea {
+  padding: .7rem;
 	min-height: 200px;
+}
+
+.notice {
+  color: #36B336;
+  padding: 20px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.alert { /*devise alert popup*/
+  color: red;
+  margin: 10px 20px;
 }

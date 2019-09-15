@@ -3,13 +3,18 @@
 // WELCOME PAGE
 
 #banner {
-	background-image: url(image_path("welcome_banner_image.jpg"));
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: top center;
 	width: 100%;
 	min-height: 500px;
 	display: table;
+
+	#cabinet {
+		background-image: url(image_path("cabinet.png"));
+		background-size: 400px;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 600px;
+		min-height: 500px;
+	}
 
 	.banner_content {
 		display: table-cell;
@@ -17,7 +22,7 @@
 		text-align: center;
 
 		h1 {
-			@include bold_font;
+			@include title_font;
 			color: #3DA79F;
 			font-size: 3.5rem;
 			margin: 0;
@@ -25,6 +30,7 @@
 
 		p {
 			font-size: 1.5rem;
+			padding: 0 7%;
 			margin: 0 0 2.5rem 0;
 			color: #98E0DB;
 		}
@@ -32,7 +38,7 @@
 }
 
 #callouts {
-	background-image: image-url("callout_background.jpg");
+	background-image: image-url("typewritter.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top center;
@@ -52,7 +58,8 @@
 		float: left;
 
 		h2 {
-			@include bold_font;
+			@include title_font;
+			font-size: 30px;
 			color: white;
 			margin-bottom: 0;
 		}
@@ -67,11 +74,17 @@
 	text-align: center;
 	padding: 7.5rem 0;
 
+	.wrapper {
+		padding: 50px;
+		border-style: dotted;
+		border-color: #409D96;
+	}
+
 	h2 {
-		@include bold_font;
+		@include title_font;
 		color: $dark_gray;
 		font-size: 3rem;
-		margin: 0;
+		margin: 5px;
 	}
 
 	p {

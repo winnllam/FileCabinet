@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'haml', '~> 5.1', '>= 5.1.2' #language
 gem 'simple_form', '~> 4.1' #make forms
 gem 'devise', '~> 4.7', '>= 4.7.1' #login logistics
+gem 'font-awesome-sass', '~> 5.9.0' #font awesome usage
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

@@ -1,10 +1,13 @@
 .wrapper_with_padding
   #doc_show
     %h1.title= @doc.title #take the doc title to render
-    %p= simple_format(@doc.content) #show action needs to be defined; and formatting
+    #text
+      %p= simple_format(@doc.content) #show action needs to be defined; and formatting
+      %br
 
     .buttons
       = link_to "Edit", edit_doc_path(@doc), class: "button" #paths coming from rake routes
       = link_to "Delete", doc_path(@doc), method: :delete, data: { confirm: "Are you sure?" }, class: "button"
 
-  = link_to "Back", docs_path, id: "return" #back to index
+  %br
+  = link_to "Back", docs_path, class: "links",id: "return" #back to index

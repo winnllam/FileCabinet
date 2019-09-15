@@ -2,46 +2,52 @@
 //DOCS INDEX
 
 #docs {
-  .doc {
-    background: #359891;
-    width: 90%;
-    min-height: 100px;
-    margin: 1rem 1%;
-    padding: 1.5rem 2.5%;
-    float: left;
-    border-radius: 2.9rem;
-    position: relative;
-    text-align: center;
+  .doc_frame {
+    width: 100%;
+    padding: 0 10%;
 
-    .title {
-      @include bold_font;
-      color: white;
-      margin: 0;
-      left: 4.5%;
-      font-size: 2.0em;
-      letter-spacing: 1px;
+    .doc {
+      background: #359891;
+      width: 100%;
+      min-height: 100px;
+      margin: 1rem 0;
+      padding: 1.5rem 2.5%;
 
-    }
-    .date {
-      position: absolute;
-      bottom: .25rem;
-      left: 5.5%;
-      color: white;
-      font-weight: lighter;
-      font-size: .75rem;
+      border-radius: 15px;
+      border-style: solid;
+      border-width: 2px;
+      position: relative;
       text-align: center;
 
-    }
-    .content {
-      position: absolute;
-      bottom: .25rem;
-      left: 27.5%;
-      color: $light_gray;
-      font-weight: bold;
-      font-size: .75rem;
-      text-align: left;
-    }
+      .title {
+        @include bold_font;
+        color: white;
+        margin: 0;
+        left: 4.5%;
+        font-size: 2.0em;
+        letter-spacing: 1px;
 
+      }
+      .date {
+        position: absolute;
+        bottom: .25rem;
+        left: 5.5%;
+        color: white;
+        font-weight: lighter;
+        font-size: .75rem;
+        text-align: center;
+
+      }
+      .content {
+        position: absolute;
+        bottom: .25rem;
+        left: 30%;
+        color: $light_gray;
+        font-weight: bold;
+        font-size: .75rem;
+        text-align: left;
+      }
+    }
   }
 }
 
@@ -61,6 +67,10 @@
   p {
     font-size: 1.0rem;
     line-height: 1.75;
+  }
+
+  #text {
+    overflow-wrap: break-word;
   }
 
   .buttons {

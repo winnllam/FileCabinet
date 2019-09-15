@@ -3,11 +3,13 @@
     - unless @docs.blank? #if they have docs
       - @docs.each do |doc| #loop through all documents, make clickable
         %a{ href: (url_for [doc])}
-          .doc
-            %p.title= doc.title #link to doc
-            %p.date= time_ago_in_words(doc.created_at) #time stamp (comes from db)
-            %p.content= truncate(doc.content, length:50) #ask for snippet of doc
+          .doc_frame
+            .doc
+              %p.title= doc.title #link to doc
+              %p.content= truncate(doc.content, length:50) #ask for snippet of doc
+              %p.date= time_ago_in_words(doc.created_at) #time stamp (comes from db)
     - else
       %h2 Empty cabinet!
       %p Starting creating now!
-      %button= link_to "Create Doc", new_doc_path, class: "button"
+      %br
+      %button= link_to "Create New", new_doc_path, class: "button"

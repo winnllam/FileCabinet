@@ -1,7 +1,8 @@
 #banner
+  #cabinet
   .banner_content
     %h1 File Cabinet
-    %p Create and storage your documents and notes in one location.
+    %p Create and store your documents and notes in one location.
     %button= link_to "Enter", new_user_registration_path, class: "button"
 
 #callouts
@@ -19,4 +20,12 @@
   .wrapper
     %h2 Join today!
     %br
-    %button= link_to "Join", new_user_registration_path, class: "button"
+    %button= link_to "Start Filing", new_user_registration_path, class: "button"
+
+%br
+%footer
+  %hr
+  %h2 Contact the creator!
+  = link_to image_tag('user-circle-regular.svg'), 'http://www.winnielam.com'
+  = link_to image_tag('linkedin-brands.svg'), 'https://www.linkedin.com/in/winnllam/'
+  %p © 2019 by Winnie Lam ; Created with Ruby on Rails
