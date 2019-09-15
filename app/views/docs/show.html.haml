@@ -4,6 +4,7 @@
     %p= simple_format(@doc.content) #show action needs to be defined; and formatting
 
     .buttons
-      = link_to "All Docs", docs_path, class: "button" #back to index
-      = link_to "Fix Doc", edit_doc_path(@doc), class: "button" #paths coming from rake routes
-      = link_to "Trash It", doc_path(@doc), method: :delete, data: { confirm: "Are you sure?" }, class: "button"
+      = link_to "Edit", edit_doc_path(@doc), class: "button" #paths coming from rake routes
+      = link_to "Delete", doc_path(@doc), method: :delete, data: { confirm: "Are you sure?" }, class: "button"
+
+  = link_to "Back", docs_path, id: "return" #back to index

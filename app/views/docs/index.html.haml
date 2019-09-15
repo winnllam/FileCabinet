@@ -8,6 +8,6 @@
             %p.date= time_ago_in_words(doc.created_at) #time stamp (comes from db)
             %p.content= truncate(doc.content, length:50) #ask for snippet of doc
     - else
-      %h2 Create Doc!
-      %p Starting creating!
-      %button= link_to "Create Doc", new_doc_path
+      %h2 Empty cabinet!
+      %p Starting creating now!
+      %button= link_to "Create Doc", new_doc_path, class: "button"

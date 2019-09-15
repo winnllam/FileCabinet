@@ -40,12 +40,19 @@ body {
 
 // BUTTON STYLING
 
-button, .button {
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.button {
 	border: none;
 	outline: none;
-	background: $green;
+	background: #3DA79F;
 	padding: 1rem 3.5rem;
 	border-radius: 0.1rem;
+  
 	a {
 		color: white;
 		text-decoration: none;
@@ -69,7 +76,7 @@ a {
 // HEADER STYLING
 
 header {
-	background: #529ECC;
+	background: #005D56;
 	position: absolute;
 	top: 0;
 	width: 100%;

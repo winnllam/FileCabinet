@@ -1,18 +1,22 @@
 #banner
   .banner_content
     %h1 File Cabinet
-    %p slogan yeet
-    %button= link_to "Enter", new_user_registration_path
+    %p Create and storage your documents and notes in one location.
+    %button= link_to "Enter", new_user_registration_path, class: "button"
 
 #callouts
   .callout_inner
     .wrapper
       .callout
+        %h2 Create
+        %p Easy to make.
         %h2 Organize
-        %p sell your application
+        %p All your documents in one place.
+        %h2 Store
+        %p Retrieve your files anytime.
 
 #bottom_cta
   .wrapper
-    %h2 Go ahead!
+    %h2 Join today!
     %br
-    %button= link_to "Join Now", new_user_registration_path
+    %button= link_to "Join", new_user_registration_path, class: "button"

@@ -3,7 +3,7 @@
 
 #docs {
   .doc {
-    background: #78594B;
+    background: #359891;
     width: 90%;
     min-height: 100px;
     margin: 1rem 1%;
@@ -64,17 +64,23 @@
   }
 
   .buttons {
-    margin-top: 3rem;
     text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
 
     a.button {
-      padding: .2rem 1.5rem;
+      padding: .5rem 1rem;
       border-radius: 0.1rem;
       text-decoration: none;
-      color: #529ECC;
-      border: 5px solid #529ECC;
+      color: #5CB5AE;
+      border: 2px solid #5CB5AE;
       @include bold_font;
       background: transparent;
+    }
+
+    .button:hover {
+      background-color: #5CB5AE;
+      color: white;
     }
   }
 }
