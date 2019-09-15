@@ -56,7 +56,8 @@ button {
 	border: none;
 	outline: none;
 	background: #3DA79F;
-	padding: 1rem 3.5rem;
+  color: white;
+	padding: 17px 27px;
 	border-radius: 0.1rem;
   transition-duration: .5s;
 
@@ -69,6 +70,7 @@ button {
 
 .button:hover {
   background: #C9F4F1;
+  color: black;
 }
 
 a {
