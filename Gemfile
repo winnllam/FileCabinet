@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 gem 'haml', '~> 5.1', '>= 5.1.2' #language
-gem 'simple_form', '~> 4.1' #make forms
+gem 'simple_form', '~> 5.0' #make forms
 gem 'devise', '~> 4.7', '>= 4.7.1' #login logistics
 
 # Reduces boot times through caching; required in config/boot.rb
